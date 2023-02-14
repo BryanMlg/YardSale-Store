@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/CSS/Login.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="Main-Container">
+        <div class="Container">
+            <img class="Logo" src="/Assets/logo_yard_sale.svg" alt="Logo">
+            <h1 class="Titulo">
+                Iniciar Sesion
+            </h1>
+            <form action="submit">
+                <label class="FormLabel" for="Email">Contraseña</label>
+                <input id="IngresarEmail" 
+                type="Email"
+                placeholder="Email"
+                class="Input-Email"
+                >
+                <label class="FormLabel" for="Password">Escriba Contraseña</label>
+                <input id="Password" 
+                type="Password"
+                placeholder="******"
+                class="Input-Email"
+                >
+                <button id="BotonC" class="primary-button" type="submit">Iniciar Sesion</button>
+            </form>
+            <button id="BotonB" class="secondary-button" type="submit">Registrarse</button>
+        </div>
+    </div>
+</body>
+</html>

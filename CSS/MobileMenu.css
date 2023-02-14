@@ -1,0 +1,78 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --Sm: 12px;
+    --Md: 16px;
+    --Lg: 18px
+}
+
+body{
+    font-family: 'Quicksand';
+}
+
+.Mobile-Menu{
+    padding: 24px;
+}
+.Mobile-Menu .Categorias{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--very-light-pink);
+    padding-bottom: 15;
+}
+.Mobile-Menu .Categorias li{
+    margin-bottom: 24px;
+}
+.Mobile-Menu .Categorias li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: var(--Lg);
+}
+
+.Mobile-Menu .Menu-Cuenta{
+    list-style: none;
+    padding: 0;
+    padding-bottom: 24px;
+}
+
+.Mobile-Menu .Menu-Cuenta li{
+    margin: 24px 0 0;
+}
+
+.Mobile-Menu .Menu-Cuenta li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: var(--Lg);
+}
+
+.Mobile-Menu .User-Account{
+    position: absolute;
+    bottom: 0;
+    }
+
+.Mobile-Menu .User-Account{
+    list-style: none;
+    padding: 0;
+    padding-bottom: 24px;
+
+}
+.Mobile-Menu .User-Account li{
+    margin: 24px 0 0;
+    
+}
+.Mobile-Menu .User-Account li a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+.Mobile-Menu .User-Account li:last-child a{
+    color: var(--hospital-green);
+}
+
+

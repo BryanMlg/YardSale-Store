@@ -1,0 +1,80 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --Sm: 12px;
+    --Md: 16px;
+    --Lg: 18px
+}
+
+body{
+    font-family: 'Quicksand';
+}
+.MainContainer .CardsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,240px);
+    place-content: center;
+    gap: 30px;
+}
+
+.MainContainer .CardsContainer .ProductCard{
+    width: 240px;
+}
+
+.MainContainer .CardsContainer .ProductCard img{
+    width: 240px;
+    height: 240px;
+    object-fit:cover;
+    border-radius: 20px;
+}
+.MainContainer .CardsContainer .ProductCard .ProductInfo{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 240px;
+ height: 60px;
+}
+
+.MainContainer .CardsContainer .ProductCard .ProductInfo p:nth-child(1){
+      font-weight: bold;
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 4px;
+}
+
+.MainContainer .CardsContainer .ProductCard .ProductInfo p:nth-child(2){
+     font-size: var(--sm);
+      margin-top: 0;
+      margin-bottom: 0;
+      color: var(--very-light-pink);
+}
+
+.MainContainer .CardsContainer .ProductCard figure{
+    margin: 0;
+}
+
+.MainContainer .CardsContainer .ProductCard figure img{
+    height: 40px;
+    width: 40px;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .MainContainer .CardsContainer{
+        grid-template-columns: repeat(auto-fill,140px);
+    }
+    .MainContainer .CardsContainer .ProductCard{
+        width: 140px;
+    }
+    .MainContainer .CardsContainer .ProductCard img{
+        width: 140px;
+        height: 140px;
+    }
+    .MainContainer .CardsContainer .ProductCard .ProductInfo{
+        width: 140px;
+    }
+  }
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewPassword</title>
+    <link rel="stylesheet" href="/CSS/CambiarPass.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="Main-Container">
+        <div class="Container">
+            <img class="Logo" src="/Assets/logo_yard_sale.svg" alt="Logo">
+            <h1 class="Titulo">
+                Crear nueva contraseña 
+            </h1>
+            <p class="Parrafo">
+                Ingresa nueva contraseña para tu cuenta
+            </p>
+            <form action="submit">
+                <label class="LabelPassword" for="Password">Contraseña</label>
+                <input id="IngresarContraseña" 
+                type="Password"
+                placeholder="******"
+                class="Input-Contraseña"
+                >
+                <label class="Re-LabelPassword" for="Re-Password">Re-Escriba Contraseña</label>
+                <input id="Re-IngresarContraseña" 
+                type="Password"
+                placeholder="******"
+                class="Input-Contraseña"
+                >
+                <button id="BotonC" class="primary-button" type="submit">Continuar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
