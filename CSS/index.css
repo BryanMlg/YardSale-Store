@@ -1,4 +1,4 @@
-:root{
+:root {
     --white: #FFFFFF;
     --black: #000000;
     --dark: #232830;
@@ -10,6 +10,411 @@
     --Lg: 18px
 }
 
-body{
-    font-family: 'Quicksand', sans-serif;
+
+body {
+    font-family: 'Quicksand';
+}
+
+header nav .Menu {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+header nav .Logo {
+    width: 125px;
+}
+
+header nav .Left {
+    display: flex;
+}
+
+header nav .Left .ListaLeft {
+    margin-left: 50%;
+}
+
+header nav .Left ul,
+header nav .Right ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    height: 60px;
+}
+
+header nav .Left ul li a,
+header nav .Right ul li a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+header nav .Left ul li a:hover {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+}
+
+header nav .Right .Email {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+header nav .Right .Email:hover {
+    color: var(--hospital-green);
+}
+
+header nav .Right ul li .SubMenu {
+    margin-left: 10px;
+    transform: rotate(90deg);
+}
+
+header nav .Right .Shopping {
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .Right div {
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.desktop-menu {
+    position: absolute;
+    right: 150px;
+    top: 68px;
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-menu ul li {
+    text-align: end;
+}
+
+.desktop-menu ul li:not(:last-child) {
+    font-weight: bold;
+}
+
+.desktop-menu ul li:last-child {
+    padding-top: 20px;
+    border-top: 1px solid var(--very-light-pink);
+}
+
+.desktop-menu ul li:last-child a {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+
+.desktop-menu ul li a {
+    color: var(--back);
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+
+.Mobile-Menu {
+    padding: 24px;
+    position: absolute;
+    top: 68px;
+}
+
+.Mobile-Menu .Categorias {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--very-light-pink);
+    padding-bottom: 15;
+}
+
+.Mobile-Menu .Categorias li {
+    margin-bottom: 24px;
+}
+
+.Mobile-Menu .Categorias li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: var(--Lg);
+}
+
+.Mobile-Menu .Menu-Cuenta {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 90px;
+}
+
+.Mobile-Menu .Menu-Cuenta li {
+    margin: 24px 0 0;
+}
+
+.Mobile-Menu .Menu-Cuenta li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: var(--Lg);
+}
+
+.Mobile-Menu .User-Account {
+    position: absolute;
+    bottom: 0;
+}
+
+.Mobile-Menu .User-Account {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 24px;
+
+}
+
+.Mobile-Menu .User-Account li {
+    margin: 24px 0 0;
+
+}
+
+.Mobile-Menu .User-Account li a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.Mobile-Menu .User-Account li:last-child a {
+    color: var(--hospital-green);
+}
+
+
+.MyOrder{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+}
+
+.MyOrder .MyOrderContainer{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 350px;
+}
+
+.MyOrder .MyOrderContainer .Tittle{
+    font-size: var(--Lg);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.MyOrder .MyOrderContainer .Tittle img{
+    transform: rotate(180deg);
+    margin-left: 10px;
+}
+
+.MyOrder .MyOrderContainer .Tittle img:hover{
+    cursor: pointer;
+}
+
+.MyOrder .MyOrderContainer .MyOrderContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.MyOrder .MyOrderContainer .MyOrderContent .Order-Info{
+    background-color: var(--text-input-field);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 20px;
+    gap: 22px;
+    padding: 0 24px;
+    width: 300px;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.MyOrder .MyOrderContainer .MyOrderContent .Order-Info p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+
+.MyOrder .MyOrderContainer .MyOrderContent .Order-Info p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+}
+
+.MyOrder .MyOrderContainer .MyOrderContent .Order-Info p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+  }
+
+  .MyOrder .MyOrderContainer .MyOrderContent .Order-Info p span:nth-child(2){
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+  }
+
+  .MyOrder .MyOrderContainer .MyOrderContent .Shopping{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+
+.MyOrder .MyOrderContainer .MyOrderContent .Shopping figure{
+    margin: 0;
+ }
+
+.MyOrder .MyOrderContainer .MyOrderContent .Shopping img{
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.MyOrder .MyOrderContainer .MyOrderContent .Shopping p:nth-child(2){
+    color: var(--very-light-pink);
+    
+}
+.MyOrder .MyOrderContainer .MyOrderContent .Shopping p:nth-child(3){
+    font-size: var(--Md);
+    font-weight: bold;
+}
+.MyOrder .MyOrderContainer .MyOrderContent .Shopping span img{
+    width: 15px;
+    height: 15px;
+    display: flex;
+}
+.MyOrder .MyOrderContainer .MyOrderContent .Shopping span img:hover{
+    cursor: pointer;
+}
+.MyOrder .MyOrderContainer .MyOrderContent .Confirmacion{
+    background-color: var(--hospital-green);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.Inactivo {
+    display: none;
+}
+
+
+@media (max-width: 1175px) {
+    header nav .Left .ListaLeft {
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 1148px) {
+    header nav .Left .ListaLeft {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 1162px) {
+    header nav .Left .ListaLeft {
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 1051px) {
+    header nav .Left .ListaLeft {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1006px) {
+    header nav .Left .ListaLeft {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 950px) {
+    header nav .Right ul li .SubMenu {
+        margin-left: 45%;
+    }
+    header nav .Right .Email {
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 756px) {
+    header nav .Menu {
+        display: block;
+    }
+
+    header nav .Left ul,header nav .Right .Email,header nav .desktop-menu {
+        display: none;
+    }
+    .MyOrder{
+        justify-content: center;
+    }
+
+
+}
+@media (min-width: 757px) {
+   header nav .Mobile-Menu{
+    display: none;
+   }
+}
+
+@media (max-width: 933px) {
+
+    header nav .desktop-menu {
+        right: 15%;
+    }
+
+}
+@media (max-width: 890px) {
+
+    header nav .desktop-menu {
+        right: 10%;
+    }
+
+}
+@media (max-width: 838px) {
+
+    header nav .desktop-menu {
+        right: 5%;
+    }
+}
+@media (max-width: 797px) {
+
+    header nav .desktop-menu {
+        right: 0%;
+    }
 }
