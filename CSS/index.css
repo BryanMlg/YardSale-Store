@@ -144,11 +144,12 @@ header nav .Right div {
 
 
 .Mobile-Menu {
-    padding: 24px;
+    padding: 0 0 0 24px;
     position: absolute;
     top: 69px;
     background-color: var(--white);
-    width: 200px;
+    left: 0;
+    width: 100%;
 }
 
 .Mobile-Menu .Categorias {
@@ -218,9 +219,9 @@ header nav .Right div {
 .MyOrder {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: end;
     position: absolute;
+   display: flex;
+   justify-content: end;
 }
 
 .MyOrder .MyOrderContainer {
@@ -318,7 +319,7 @@ header nav .Right div {
     width: 15px;
     height: 15px;
     display: flex;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 .MyOrder .MyOrderContainer .MyOrderContent .Shopping span img:hover {

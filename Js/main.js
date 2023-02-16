@@ -3,22 +3,17 @@ const DesktopMenu = document.querySelector(".desktop-menu");
 Email.addEventListener("click", ToogleSubMenu);
 
 function ToogleSubMenu() {
-  const isMyOrderClosed = MyOrder.classList.contains("Inactivo");
-  if (!isMyOrderClosed) {
-    MyOrder.classList.add("Inactivo");
-  }
   DesktopMenu.classList.toggle("Inactivo");
+  MyOrder.classList.add("Inactivo");
 }
 
 const Menu = document.querySelector(".Menu");
 const MobileMenu = document.querySelector(".Mobile-Menu");
 Menu.addEventListener("click", ToogleSubMenuMobile);
 function ToogleSubMenuMobile() {
-  const isMyOrderClosed = MyOrder.classList.contains("Inactivo");
-  if (!isMyOrderClosed) {
-    MyOrder.classList.add("Inactivo");
-  }
   MobileMenu.classList.toggle("Inactivo");
+  MyOrder.classList.add("Inactivo");
+  DesktopMenu.classList.add("Inactivo");
 }
 
 const Carrito = document.querySelector(".Carrito");
@@ -26,18 +21,14 @@ const MyOrder = document.querySelector(".MyOrder");
 Carrito.addEventListener("click", ToogleSubMenuCarro);
 
 function ToogleSubMenuCarro() {
-  const isDesktopMenuClosed = DesktopMenu.classList.contains("Inactivo");
-  const isMobileMenuClosed = MobileMenu.classList.contains("Inactivo");
-  if (!isDesktopMenuClosed) {
-    DesktopMenu.classList.add("Inactivo");
-  }
-  if (!isMobileMenuClosed) {
-    MobileMenu.classList.add("Inactivo");
-  }
   MyOrder.classList.toggle("Inactivo");
+
+  DesktopMenu.classList.add("Inactivo");
+
+  MobileMenu.classList.add("Inactivo");
 }
 
-const cardsContainer = document.querySelector(".cards-container")
+const cardsContainer = document.querySelector(".cards-container");
 
 const productList = [];
 productList.push({
@@ -59,11 +50,11 @@ productList.push({
     "https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 });
 productList.push({
-    name: "Pc-MasterRise",
-    price: 620,
-    image:
-      "https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  });
+  name: "Pc-MasterRise",
+  price: 620,
+  image:
+    "https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+});
 
 function renderProducts(arr) {
   for (product of arr) {
