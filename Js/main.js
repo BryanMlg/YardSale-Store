@@ -5,15 +5,18 @@ Email.addEventListener("click", ToogleSubMenu);
 function ToogleSubMenu() {
   DesktopMenu.classList.toggle("Inactivo");
   MyOrder.classList.add("Inactivo");
+  ProductDetail.classList.add("Inactivo")
 }
 
 const Menu = document.querySelector(".Menu");
 const MobileMenu = document.querySelector(".Mobile-Menu");
 Menu.addEventListener("click", ToogleSubMenuMobile);
+
 function ToogleSubMenuMobile() {
   MobileMenu.classList.toggle("Inactivo");
   MyOrder.classList.add("Inactivo");
   DesktopMenu.classList.add("Inactivo");
+  ProductDetail.classList.add("Inactivo")
 }
 
 const Carrito = document.querySelector(".Carrito");
@@ -26,6 +29,22 @@ function ToogleSubMenuCarro() {
   DesktopMenu.classList.add("Inactivo");
 
   MobileMenu.classList.add("Inactivo");
+  ProductDetail.classList.add("Inactivo")
+}
+
+const ProductDetail =document.querySelector(".Product-Detail") 
+function OpenDetailsProduct(){
+ProductDetail.classList.remove("Inactivo");
+DesktopMenu.classList.add("Inactivo");
+MyOrder.classList.add("Inactivo");
+MobileMenu.classList.add("Inactivo");
+}
+
+const ProductDetailClose =document.querySelector(".Product-Detail-Close")
+ProductDetailClose.addEventListener("click",CloseProductDetail)
+
+function CloseProductDetail(){
+    ProductDetail.classList.add("Inactivo")
 }
 
 const cardsContainer = document.querySelector(".cards-container");
@@ -56,10 +75,18 @@ productList.push({
     "https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 });
 
+productList.push({
+  name: "Pc-MasterRise",
+  price: 620,
+  image:
+    "https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+});
+
 function renderProducts(arr) {
   for (product of arr) {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
+    productCard.addEventListener("click",OpenDetailsProduct);
     const productImg = document.createElement("img");
     productImg.setAttribute("src", product.image);
     const productInfo = document.createElement("div");
